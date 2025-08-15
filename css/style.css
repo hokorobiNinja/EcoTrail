@@ -1,0 +1,135 @@
+/* 基本設定 */
+:root {
+    --primary-color: #2E7D32; /* 深い緑 */
+    --secondary-color: #66BB6A; /* 明るい緑 */
+    --background-color: #F9F9F9; /* 明るい背景色 */
+    --text-color: #333;
+    --input-border-color: #ccc;
+    --white-color: #fff;
+    --font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ログインコンテナ */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/* ヘッダー */
+.login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.app-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.app-tagline {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+/* フォーム */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.form-group input {
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--input-border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: var(--font-family);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.2);
+}
+
+/* ボタン */
+.btn {
+    padding: 0.9rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: var(--font-family);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    margin-top: 1rem;
+}
+
+.btn-primary:hover {
+    background-color: #1B5E20; /* より濃い緑 */
+}
+
+/* フォームフッターと区切り線 */
+.form-footer {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.separator {
+    text-align: center;
+    margin: 0.8rem 0;
+    color: #999;
+}
+
+.separator span {
+    background-color: var(--background-color);
+    padding: 0 1rem;
+}
+
+/* ソーシャルログイン・新規登録 */
+.social-login {
+    text-align: center;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+a:hover {
+    text-decoration: underline;
+}
