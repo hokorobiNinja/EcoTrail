@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>カメラ - EcoTrail</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+ 
+    <header class="app-header">
+        <nav class="app-nav">
+            <ul>
+                <li><a href="map.html">地図</a></li>
+                <li><a href="camera.html" class="active">カメラ</a></li>
+                <li><a href="photoList.html">写真一覧</a></li>
+                <li><a href="login.html">ログアウト</a></li>
+            </ul>
+        </nav>
+    </header>
+ 
+    <div class="camera-container">
+        <video id="camera-stream" autoplay playsinline></video>
+        <canvas id="camera-snapshot" style="display:none;"></canvas>
+
+        <div id="capture-controls" class="camera-controls">
+            <button id="shutter-btn" class="shutter-button" aria-label="撮影">
+                <span></span>
+            </button>
+        </div>
+
+        <div id="preview-controls" class="camera-controls" style="display: none;">
+            <button id="retake-btn" class="btn btn-secondary">撮り直す</button>
+            <button id="save-btn" class="btn btn-primary">保存する</button>
+        </div>
+    </div>
+
+    <script src="js/camera.js"></script>
+
+</body>
+</html>
